@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/shopping_list.dart';
+import 'add_item_page.dart';
+
 class TaskPage extends StatefulWidget {
   const TaskPage({super.key});
 
@@ -10,6 +13,7 @@ class TaskPage extends StatefulWidget {
 
 class _TaskPageState extends State<TaskPage> {
   List shoppingList = ['burger', 'coffee', 'oil'];
+
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +40,7 @@ class _TaskPageState extends State<TaskPage> {
           ),
           Expanded(
             child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
@@ -43,14 +48,7 @@ class _TaskPageState extends State<TaskPage> {
                   topRight: Radius.circular(30)
                 )
               ),
-              child: ListView.builder(
-                itemCount: shoppingList.length,
-                itemBuilder: (BuildContext context, int index) {  
-                  return ListTile(
-                    title: Text('${shoppingList[index]}', style: const TextStyle(fontSize: 15, fontWeight: FontWeight.normal, color: Colors.black),),
-                  );
-                },
-              ),
+              child: ShoppingList(shoppingList: shoppingList),
             ),
           )
         ],
@@ -59,8 +57,16 @@ class _TaskPageState extends State<TaskPage> {
         backgroundColor: Colors.greenAccent, 
         child: const Icon(Icons.add, color: Colors.white,),
         onPressed: () {  
+          showModalBottomSheet(
+            isScrollControlled: true,
+            context: context, 
+            builder: (context) => const AddItemPage(),
+          );
         },
       ),
     );
   }
-} 
+}
+
+
+

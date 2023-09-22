@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todo/pages/task_page.dart';
+import 'package:todo/pages/shopping_list_page.dart';
 
 void main() {
   runApp(const MyApp());
