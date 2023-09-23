@@ -1,5 +1,3 @@
-import 'dart:collection';
-
 import 'package:flutter/material.dart';
 
 import 'item.dart';
@@ -26,5 +24,11 @@ class ItemData extends ChangeNotifier{
 
   void updateItems(Item item){
     item.toggleDone();
+    notifyListeners();
+  }
+
+  void deleteItems(Item item){
+    _items.remove(item);
+    notifyListeners();
   }
 }

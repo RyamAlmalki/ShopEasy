@@ -7,7 +7,6 @@ import 'package:provider/provider.dart';
 class ItemList extends StatelessWidget{
   const ItemList({super.key});
 
-  
   @override
   Widget build(BuildContext context) {
     return Consumer<ItemData>(
@@ -15,13 +14,16 @@ class ItemList extends StatelessWidget{
           return ListView.builder(
           itemCount: itemData.itemCount, 
           itemBuilder: (BuildContext context, int index) {  
+            final item = itemData.items[index];
             return ItemTile(
-              itemTitle: itemData.items[index].name, 
-              isChecked: itemData.items[index].isDone, 
+              itemTitle: item.name, 
+              isChecked: item.isDone, 
               onChanged: (bool? checkboxState) {
-                // setState(() {
-                //   Provider.of<ItemData>(context).items[index].isDone = checkboxState!;
-                // });
+                // we updated the item data without having to pass the list as a constructor 
+                itemData.updateItems(item);
+              },
+              onLongPress: () {
+                itemData.deleteItems(item);
               },
             );
           },

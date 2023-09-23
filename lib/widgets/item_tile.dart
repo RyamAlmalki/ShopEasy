@@ -5,7 +5,8 @@ class ItemTile extends StatelessWidget {
   final bool isChecked;
   final String itemTitle;
   final Function(bool?) onChanged;
-  const ItemTile({super.key, required this.itemTitle, required this.isChecked, required this.onChanged});
+  final Function() onLongPress;
+  const ItemTile({super.key, required this.itemTitle, required this.isChecked, required this.onChanged, required this.onLongPress});
   
   @override
   Widget build(BuildContext context) {
@@ -23,6 +24,7 @@ class ItemTile extends StatelessWidget {
           color: Colors.black
         ),
       ),
+      onLongPress: onLongPress
     );
   }
 }
