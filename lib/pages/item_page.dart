@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:todo/widgets/items_list.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../models/item_data.dart';
+import '../widgets/items_list.dart';
 import 'add_item_page.dart';
 
 
-class  ItemsPage extends StatelessWidget {
+class  ItemsPage extends ConsumerWidget {
   const ItemsPage({super.key});
 
 
-
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    // rebuild the widget when the items list changes
+    final itemsNotifier = ref.read(itemsProvider);
+
     return Scaffold(
       backgroundColor: Colors.greenAccent,
       body: Column(
@@ -29,7 +31,7 @@ class  ItemsPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 10,),
                 const Text('ShopEasy', style: TextStyle(fontSize: 50, fontWeight: FontWeight.w700, color: Colors.white),),
-                Text('${Provider.of<ItemData>(context).itemCount} items', style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: Colors.white),),
+                Text('${itemsNotifier.length} items', style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: Colors.white),),
               ],
             ),
           ),

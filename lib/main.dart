@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:todo/models/item_data.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:todo/pages/item_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    // For widgets to be able to read providers, we need to wrap the entire
+    // application in a "ProviderScope" widget.
+    // This is where the state of our providers will be stored.
+      const ProviderScope(
+      child: MyApp()
+    )
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -13,17 +19,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (BuildContext context) => ItemData(),
-      child: MaterialApp(
+    return const MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home: const ItemsPage()
-      ),
+        home: ItemsPage()
     );
   }
 }

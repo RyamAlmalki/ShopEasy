@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:todo/models/item.dart';
 import '../models/item_data.dart';
 
-class AddItemPage extends StatelessWidget {
+class AddItemPage extends ConsumerWidget {
   AddItemPage({super.key});
   final TextEditingController _controller = TextEditingController();
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return SingleChildScrollView(
       child: Container(
         padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
@@ -55,13 +55,13 @@ class AddItemPage extends StatelessWidget {
                     backgroundColor: Colors.greenAccent, // Background color
                   ),
                   onPressed: (){
-                    Provider.of<ItemData>(context, listen: false).addItem(_controller.text);
+                    int id = DateTime.now().millisecondsSinceEpoch;
+                    ref.read(itemsProvider.notifier).addItem(Item(name: _controller.text, isCompleted: false, id: id));
                     Navigator.pop(context);
                   }, 
                   child: const Text('Add', style: TextStyle(color: Colors.white, fontSize: 20),)
                 ),
               ),
-
               const SizedBox(
                 height: 50,
               ),

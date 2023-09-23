@@ -1,35 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:todo/models/item_data.dart';
 import 'package:todo/widgets/item_tile.dart';
-import 'package:provider/provider.dart';
 
 
-class ItemList extends StatelessWidget{
+
+class ItemList extends ConsumerWidget{
   const ItemList({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return Consumer<ItemData>(
-      builder: (context, itemData, child) {
-          return ListView.builder(
-          itemCount: itemData.itemCount, 
-          itemBuilder: (BuildContext context, int index) {  
-            final item = itemData.items[index];
-            return ItemTile(
-              itemTitle: item.name, 
-              isChecked: item.isDone, 
-              onChanged: (bool? checkboxState) {
-                // we updated the item data without having to pass the list as a constructor 
-                itemData.updateItems(item);
-              },
-              onLongPress: () {
-                itemData.deleteItems(item);
-              },
-            );
+  Widget build(BuildContext context, WidgetRef ref) {
+      // rebuild the widget when the item list changes
+      final itemsNotifier = ref.watch(itemsProvider);
+      
+      return ListView.builder(
+      itemCount: itemsNotifier.length, 
+      itemBuilder: (BuildContext context, int index) {  
+        final item = itemsNotifier[index];
+        return ItemTile(
+          itemTitle: item.name, 
+          isChecked: item.isCompleted, 
+          onChanged: (bool? checkboxState) {
+            ref.read(itemsProvider.notifier).toggle(item.id);
+          },
+          onLongPress: () {
+            ref.read(itemsProvider.notifier).removeItem(item.id);
           },
         );
       },
-    );
+    );  
   }
 }
 
