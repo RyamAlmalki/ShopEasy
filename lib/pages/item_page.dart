@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
-
-import '../widgets/shopping_list.dart';
+import 'package:provider/provider.dart';
+import 'package:todo/widgets/items_list.dart';
+import '../models/item_data.dart';
 import 'add_item_page.dart';
 
-class TaskPage extends StatefulWidget {
-  const TaskPage({super.key});
 
-  @override
-  State<TaskPage> createState() => _TaskPageState();
-}
+class  ItemsPage extends StatelessWidget {
+  const ItemsPage({super.key});
 
-
-class _TaskPageState extends State<TaskPage> {
-  List shoppingList = ['burger', 'coffee', 'oil'];
 
 
   @override
@@ -22,19 +17,19 @@ class _TaskPageState extends State<TaskPage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Padding(
-            padding: EdgeInsets.only(top: 100, left: 30, right: 30, bottom: 30),
+           Padding(
+            padding: const EdgeInsets.only(top: 100, left: 30, right: 30, bottom: 30),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CircleAvatar(
+                const CircleAvatar(
                   radius: 30,
                   backgroundColor: Colors.white,
                   child: Icon(Icons.shopping_cart, color: Colors.greenAccent, size: 30,),
                 ),
-                SizedBox(height: 10,),
-                Text('ShopEasy', style: TextStyle(fontSize: 50, fontWeight: FontWeight.w700, color: Colors.white),),
-                Text('12 Items', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: Colors.white),),
+                const SizedBox(height: 10,),
+                const Text('ShopEasy', style: TextStyle(fontSize: 50, fontWeight: FontWeight.w700, color: Colors.white),),
+                Text('${Provider.of<ItemData>(context).itemCount} items', style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: Colors.white),),
               ],
             ),
           ),
@@ -48,7 +43,7 @@ class _TaskPageState extends State<TaskPage> {
                   topRight: Radius.circular(30)
                 )
               ),
-              child: ShoppingList(shoppingList: shoppingList),
+              child: const ItemList()
             ),
           )
         ],
@@ -60,7 +55,8 @@ class _TaskPageState extends State<TaskPage> {
           showModalBottomSheet(
             isScrollControlled: true,
             context: context, 
-            builder: (context) => const AddItemPage(),
+            builder: (context) => AddItemPage(
+            ),
           );
         },
       ),

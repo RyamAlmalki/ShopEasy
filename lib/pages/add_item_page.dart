@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../models/item_data.dart';
 
 class AddItemPage extends StatelessWidget {
-  const AddItemPage({super.key});
+  AddItemPage({super.key});
+  final TextEditingController _controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +25,12 @@ class AddItemPage extends StatelessWidget {
                 height: 50,
               ),
     
-              const Padding(
-                padding: EdgeInsets.only(right: 30, left: 30),
+               Padding(
+                padding: const EdgeInsets.only(right: 30, left: 30),
                 child: TextField(
+                  controller: _controller,
                   autofocus: true,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(width: 3, color: Colors.greenAccent),
                     ),
@@ -50,11 +55,16 @@ class AddItemPage extends StatelessWidget {
                     backgroundColor: Colors.greenAccent, // Background color
                   ),
                   onPressed: (){
-              
+                    Provider.of<ItemData>(context, listen: false).addItem(_controller.text);
+                    Navigator.pop(context);
                   }, 
                   child: const Text('Add', style: TextStyle(color: Colors.white, fontSize: 20),)
                 ),
-              )
+              ),
+
+              const SizedBox(
+                height: 50,
+              ),
             ],
           ),
         ),
