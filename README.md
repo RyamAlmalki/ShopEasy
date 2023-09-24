@@ -112,3 +112,8 @@ In the `main` function of your application, you wrap your entire app with a `Pro
 
 By using `ProviderScope`, you establish a central hub for state management, ensuring that data is accessible and consistent throughout your application. This is essential for maintaining a synchronized shopping experience for your users.
 
+<p align="center">
+    <img width="1200" src="https://github.com/RyamAlmalki/ShopEasy/blob/master/class4.png" alt="Material Bread logo">
+</p>
+
+In your `ItemsPage` and `ItemList` widgets, you make use of the `ConsumerWidget` from the `hooks_riverpod` package. This widget plays a crucial role in your application's state management. It automatically listens to changes in the provided state and rebuilds your UI when the state changes. This ensures that your user interface stays synchronized with the underlying data, providing a seamless shopping experience for your users.
