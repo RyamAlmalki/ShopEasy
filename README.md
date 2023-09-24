@@ -1,5 +1,5 @@
 
-```markdown
+
 <p align="center">
     <img width="1200" src="https://github.com/RyamAlmalki/ShopEasy/blob/master/banner.png" alt="ShopEasy Logo">
 </p>
