@@ -85,3 +85,16 @@ Widget build(BuildContext context) {
 2. **Code Maintainability**: As your application grows in complexity, managing and passing data through an ever-expanding widget tree can become challenging and error-prone. It can lead to code that is harder to maintain and understand.
 
 3. **Inefficient Rerendering**: In Flutter, when the parent widget rebuilds (e.g., due to a state change), all its child widgets rebuild as well, even if their properties haven't changed. Inefficiently passing data through many intermediate widgets can trigger unnecessary widget rebuilds and negatively impact performance.
+
+<h3 align="left">State Management in "ShopEasy"</h3>
+<p>In "ShopEasy" app, I implemented state management using the hooks_riverpod package. This package helps you manage the state of your application and ensure that changes to the state are reflected in the user interface efficiently.</p>
+
+<p align="center">
+    <img width="1200" src="https://github.com/RyamAlmalki/ShopEasy/blob/master/banner.png" alt="Material Bread logo">
+</p>
+
+
+
+
+
+
