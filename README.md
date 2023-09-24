@@ -92,7 +92,7 @@ Widget build(BuildContext context) {
 <p align="center">
     <img width="1200" src="https://github.com/RyamAlmalki/ShopEasy/blob/master/class.png" alt="Material Bread logo">
 </p>
-<p>Here is a class diagram representing the structure of the application and the flow of data:</p>
+<p>Here is a class diagram representing the structure of the application and the flow of data.</p>
 
 <p align="center">
     <img width="1200" src="https://github.com/RyamAlmalki/ShopEasy/blob/master/class2.png?raw=true" alt="Material Bread logo">
