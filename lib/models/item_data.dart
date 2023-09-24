@@ -4,7 +4,7 @@ import 'item.dart';
 
 
 class ItemsNotifier extends StateNotifier<List<Item>>{
-  // redirect to the super class constructor (:)
+  // Redirect to the super class constructor (:)
   // We initialize the list of Items to an empty list
   ItemsNotifier() : super([]);
 
@@ -13,7 +13,7 @@ class ItemsNotifier extends StateNotifier<List<Item>>{
     // Since our state is immutable, we are not allowed to do `state.add(todo)`.
     // Instead, we should create a new list of item which contains the previous
     // items and the new one.
-    // Using Dart's spread operator (...) here is helpful!
+    // Using Dart's spread operator (...) 
     state = [...state, item];
     // No need to call "notifyListeners" or anything similar. Calling "state ="
     // will automatically rebuild the UI when necessary.
@@ -29,7 +29,7 @@ class ItemsNotifier extends StateNotifier<List<Item>>{
     ];
   }
 
-   // Let's mark a todo as completed
+   // Let's mark a item as completed
   void toggle(int itemId) {
     state = [
       for (final item in state)

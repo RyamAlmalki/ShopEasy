@@ -12,7 +12,7 @@ class  ItemsPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // rebuild the widget when the items list changes
-    final itemsNotifier = ref.read(itemsProvider);
+    final itemsNotifier = ref.watch(itemsProvider);
 
     return Scaffold(
       backgroundColor: Colors.greenAccent,
