@@ -77,7 +77,8 @@ Widget build(BuildContext context) {
 <p>In the provided code, Task2 and Task3 do receive the data parameter from their parent widget, Task1. However, they don't directly use this data parameter in their build methods. Instead, they pass it further down the widget tree without using it themselves. This design may not be the most efficient or optimal approach, and it highlights a situation where state management could be more efficient and organized.
 </p>
 
-##Here's an explanation of why this design isn't efficient:
+<p>Here's an explanation of why this design isn't efficient:</p>
+
 
 1. **Propagating Unnecessary Data**: When `Task2` and `Task3` receive the `data` parameter but don't use it, they are essentially acting as intermediaries for passing data down the widget tree. This means that the `data` parameter is being unnecessarily propagated through multiple widgets, which can add overhead, especially when dealing with large and complex applications.
 
