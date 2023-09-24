@@ -1,16 +1,6 @@
-# todo
+<p align="center">
+    <img width="1200" src="https://github.com/RyamAlmalki/QuickFly/blob/main/banner.png" alt="Material Bread logo">
+</p>
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<h1 align="left">QuickFly</h1>
+<p>QuickFly is your go-to solution for booking flights in the fastest and most convenient way possible. Say goodbye to the hassle of navigating through complicated booking processes and let QuickFly take you to your dream destination with ease.</p>
