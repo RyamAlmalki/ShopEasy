@@ -95,7 +95,7 @@ Widget build(BuildContext context) {
 <p>Here is a class diagram representing the structure of the application and the flow of data:</p>
 
 <p align="center">
-    <img width="1200" src="https://github.com/RyamAlmalki/ShopEasy/blob/master/class2.png" alt="Material Bread logo">
+    <img width="1200" src="https://github.com/RyamAlmalki/ShopEasy/blob/master/class2.png?raw=true" alt="Material Bread logo">
 </p>
 
 The `ItemsNotifier` class is a crucial part of this application. It extends the `StateNotifier` class and is responsible for managing the state of your shopping items. This class provides the following methods:
