@@ -2,17 +2,15 @@
     <img width="1200" src="https://github.com/RyamAlmalki/ShopEasy/blob/master/banner.png" alt="Material Bread logo">
 </p>
 
-<h1 align="left">ShopEasy</h1>
+<h3 align="left">ShopEasy</h3>
 <p>In the "ShopEasy" grocery shopping list app, state management is used to keep track of and update the application's data and user interface based on user interactions and changes in data.  Here's how state management is used in the "ShopEasy" app.</p>
 
-<h1 align="left">What is state?</h1>
+<h3 align="left">What is state?</h3>
 <p>In Flutter, state is any data that can change over time and needs to be reflected in the user interface.</p>
 
 
-<h1 align="left">Why we need ?</h1>
-## Code Example
+<h3 align="left">Why we need State Management?</h3>
 
-Here's the code for the Flutter application:
 
 ```dart
 import 'package:flutter/material.dart';
