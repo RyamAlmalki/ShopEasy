@@ -116,5 +116,16 @@ By using `ProviderScope`, you establish a central hub for state management, ensu
     <img width="1200" src="https://github.com/RyamAlmalki/ShopEasy/blob/master/class4.png" alt="Material Bread logo">
 </p>
 
-<h3 align="left">WidgetRef and ref.read</h3>
-Within the build methods of your ItemsPage and ItemList widgets, you use the WidgetRef ref parameter. This parameter allows you to access the itemsProvider and interact with the state management logic defined in ItemsNotifier. Specifically, you use ref.read to read the state and perform operations related to the state management.
+<h3 align="left">WidgetRef, ref.read and watch</h3>
+Within the build methods of your ItemsPage and ItemList widgets, you use the WidgetRef ref parameter. This parameter allows you to access the itemsProvider and interact with the state management logic defined in ItemsNotifier. Specifically, you use ref.read to read the state and perform operations related to the state management. In addition to using ref.read, you also leverage the watch method provided by hooks_riverpod. The watch method is used to subscribe to changes in a provider's state. When you use watch, your widget will rebuild whenever the watched state changes. This is particularly useful for efficiently updating your UI in response to state changes without unnecessary rebuilds.
+```dart
+class ItemsList extends ConsumerWidget {
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    // Watch the itemsProvider for changes
+    final items = ref.watch(itemsProvider);
+
+    // ...
+  }
+}
+
