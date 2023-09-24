@@ -116,4 +116,5 @@ By using `ProviderScope`, you establish a central hub for state management, ensu
     <img width="1200" src="https://github.com/RyamAlmalki/ShopEasy/blob/master/class4.png" alt="Material Bread logo">
 </p>
 
-In your `ItemsPage` and `ItemList` widgets, you make use of the `ConsumerWidget` from the `hooks_riverpod` package. This widget plays a crucial role in your application's state management. It automatically listens to changes in the provided state and rebuilds your UI when the state changes. This ensures that your user interface stays synchronized with the underlying data, providing a seamless shopping experience for your users.
+<h3 align="left">WidgetRef and ref.read</h3>
+Within the build methods of your ItemsPage and ItemList widgets, you use the WidgetRef ref parameter. This parameter allows you to access the itemsProvider and interact with the state management logic defined in ItemsNotifier. Specifically, you use ref.read to read the state and perform operations related to the state management.
