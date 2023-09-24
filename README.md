@@ -94,7 +94,11 @@ Widget build(BuildContext context) {
 </p>
 <p>Here is a class diagram representing the structure of the application and the flow of data:</p>
 
+The `ItemsNotifier` class is a crucial part of this application. It extends the `StateNotifier` class and is responsible for managing the state of your shopping items. This class provides the following methods:
 
+- `addItem(item)`: Adds a new item to the shopping list.
+- `removeItem(item)`: Removes an item from the shopping list.
+- `toggleItem(item)`: Toggles the status (e.g., checked or unchecked) of an item.
 
 
 
