@@ -90,8 +90,9 @@ Widget build(BuildContext context) {
 <p>In "ShopEasy" app, I implemented state management using the hooks_riverpod package. This package helps you manage the state of your application and ensure that changes to the state are reflected in the user interface efficiently.</p>
 
 <p align="center">
-    <img width="1200" src="https://github.com/RyamAlmalki/ShopEasy/blob/master/classes.png" alt="Material Bread logo">
+    <img width="1200" src="https://github.com/RyamAlmalki/ShopEasy/blob/master/class.png" alt="Material Bread logo">
 </p>
+<p>Here is a class diagram representing the structure of the application and the flow of data:</p>
 
 
 
