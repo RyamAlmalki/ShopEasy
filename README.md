@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="1200" src="https://github.com/RyamAlmalki/QuickFly/blob/main/banner.png" alt="Material Bread logo">
+    <img width="1200" src="https://github.com/RyamAlmalki/ShopEasy/blob/master/banner.png" alt="Material Bread logo">
 </p>
 
 <h1 align="left">QuickFly</h1>
