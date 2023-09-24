@@ -72,3 +72,7 @@ Widget build(BuildContext context) {
  );
 }
 }
+```
+
+<p>In the provided code, Task2 and Task3 do receive the data parameter from their parent widget, Task1. However, they don't directly use this data parameter in their build methods. Instead, they pass it further down the widget tree without using it themselves. This design may not be the most efficient or optimal approach, and it highlights a situation where state management could be more efficient and organized.
+</p>
