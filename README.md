@@ -104,6 +104,11 @@ The `ItemsNotifier` class is a crucial part of this application. It extends the 
 - `removeItem(item)`: Removes an item from the shopping list.
 - `toggleItem(item)`: Toggles the status (e.g., checked or unchecked) of an item.
 
+<p align="center">
+    <img width="1200" src="https://github.com/RyamAlmalki/ShopEasy/blob/master/class2.png?raw=true" alt="Material Bread logo">
+</p>
 
+In the `main` function of your application, you wrap your entire app with a `ProviderScope`. This is a crucial step in setting up the state management for your application. The `ProviderScope` is responsible for storing the state of your providers, and it enables you to create and manage provider instances while allowing state sharing across different parts of your app.
 
+By using `ProviderScope`, you establish a central hub for state management, ensuring that data is accessible and consistent throughout your application. This is essential for maintaining a synchronized shopping experience for your users.
 
