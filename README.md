@@ -2,5 +2,5 @@
     <img width="1200" src="https://github.com/RyamAlmalki/ShopEasy/blob/master/banner.png" alt="Material Bread logo">
 </p>
 
-<h1 align="left">QuickFly</h1>
-<p>QuickFly is your go-to solution for booking flights in the fastest and most convenient way possible. Say goodbye to the hassle of navigating through complicated booking processes and let QuickFly take you to your dream destination with ease.</p>
+<h1 align="left">ShopEasy</h1>
+<p>QuickFly In the "ShopEasy" grocery shopping list app, state management is used to keep track of and update the application's data and user interface based on user interactions and changes in data.  Here's how state management is used in the "ShopEasy" app.</p>
