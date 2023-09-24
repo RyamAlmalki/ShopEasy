@@ -15,7 +15,7 @@
 <h3 align="left">Understanding State in Flutter</h3>
 <p>In Flutter, "state" refers to any data that can change over time and needs to be reflected in the user interface. In other words, it's the dynamic information that makes the app interactive and responsive.</p>
 
-<h3 align="left">Why I Have Done This State Management?</h3>
+<h3 align="left">Why we need State Management?</h3>
 <p>Consider this example:</p>
 
 ```dart
@@ -85,6 +85,4 @@ class MyApp extends StatelessWidget {
 ---
 
 <p align="center"><b>Explore ShopEasy and start organizing your shopping list effortlessly!</b></p>
-```
 
-These changes now reflect that you have implemented state management and provide a clear understanding of its significance in your project.
