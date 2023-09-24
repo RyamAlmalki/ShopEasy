@@ -8,6 +8,10 @@
 
 <p align="center">ShopEasy is a grocery shopping list app built with Flutter. This README explains the concept of state management in the app.</p>
 
+<p align="center">
+    <img width="1200" src="https://github.com/RyamAlmalki/ShopEasy/blob/master/demo.png" alt="ShopEasy Logo">
+</p>
+
 <h3 align="left">Understanding State in Flutter</h3>
 <p>In Flutter, "state" refers to any data that can change over time and needs to be reflected in the user interface. In other words, it's the dynamic information that makes your app interactive and responsive.</p>
 
